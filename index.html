@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hamilton Waterfalls</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-drawer.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    </head>
+    <body class="has-drawer">
+
+        <!-- Drawer containing list of waterfalls -->
+        <div id="list-drawer" class="drawer dw-xs-5 dw-sm-6 dw-md-4 fold" 
+        aria-labelledby="list-drawer">
+            <div class="drawer-contents has-inner-drawer">
+                <div class="drawer-body">
+                    <p><button class="btn btn-info" type="button" data-toggle="drawer" data-target="#list-drawer" 
+                    aria-expanded="false" aria-controls="list-drawer">
+                        Back
+                    </button></p>
+                    <p><input placeholder="Search…" type="search" data-bind="value: query, valueUpdate: 'keyup'" 
+                    autocomplete="off" class="form-control"></p>
+                    <ul class="drawer-nav" data-bind="foreach: waterfallsKO">
+                        <li role="presentation" class="active">
+                            <a href="#waterfall-drawer" data-toggle="drawer" aria-expanded="false" 
+                            data-bind="text: name, click: pickFromList"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+        </div>
+
+        <!-- Drawer containing waterfall details -->
+        <div id="waterfall-drawer" class="drawer drawer-inside dw-xs-5 dw-sm-6 dw-md-4 fold"
+        aria-labelledby="waterfall-drawer">
+            <div class="drawer-contents">
+                <div class="drawer-body" data-bind="with: currentWaterfall">
+                    <button class="btn btn-info" type="button" data-toggle="drawer" data-target="#waterfall-drawer" aria-expanded="false" aria-controls="waterfall-drawer">
+                        Back
+                    </button>
+                    <h3 data-bind="text: name"></h3>
+                    <p><strong>Type:</strong> <span data-bind="text: type"></span></p>
+                    <p><strong>Watercourse:</strong> <span data-bind="text: watercourse"></span></p>
+                    <p><strong>Height:</strong> <span data-bind="text: height"></span> m</p>
+                    <p><strong>Width:</strong> <span data-bind="text: width"></span> m</p>
+                    <p><img src="" data-bind="attr: {src: img}" class="img-responsive"></p>
+                    <p data-bind="html: description"></p>
+
+                    <ul class="drawer-nav" data-bind="foreach: errorMsgs">
+                        <li role="presentation" class="active bg-danger">
+                            <span data-bind="text: error"></span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <!-- Header bar -->
+            <div class="header row">
+                <div class="col-xs-1">
+                    <button class="btn btn-info glyphicon glyphicon-menu-hamburger" type="button" data-toggle="drawer" data-target="#list-drawer" aria-expanded="false" aria-controls="list-drawer" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="col-xs-11 title">
+                    <p>Hamilton Waterfalls</p>
+                </div>
+            </div>
+
+            <!-- Google map -->
+            <div class="content row">
+                <div id="map" class="col-xs-12 embed-responsive embed-responsive-16by9">
+                </div>
+            </div>
+
+        </div>
+        <script src="js/libs/knockout-3.4.2.js"></script>
+        <script src="js/libs/jquery-3.2.0.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/drawer.min.js"></script>
+        <script src="js/waterfalls.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
