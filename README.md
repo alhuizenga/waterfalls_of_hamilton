@@ -7,6 +7,7 @@ Waterfall data, including lat/long, was scraped from the Wikipedia API.
 * [jQuery 3.2.0](https://jquery.org/)
 * [Bootstrap 3.3.7](http://getbootstrap.com/)
 * [Bootstrap Drawer](http://carolineamaba.com/bootstrap-drawer/)
+* [Glyphicons](http://glyphicons.com/)
 
 ## APIs I used:
 * [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/)
