@@ -1,0 +1,41 @@
+/** {
+  border: 1px solid red;
+}*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  box-sizing: border-box;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 16px;
+  vertical-align: middle;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background: #ffffff;
+}
+
+.title {
+  padding-top: 8px;
+}
+
+.drawer-controls a {
+  color: #000000;
+  font-size: 18px; 
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.infoWindow {
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+
+#map {
+  height: 100%;
+  z-index: 1;
+}  
