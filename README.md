@@ -1,6 +1,6 @@
 # waterfalls_of_hamilton
-An interactive map of waterfalls in the Hamilton, Ontario region. Built for the Udacity Neighborhood Map Project.
-Waterfall data, including lat/long, was scraped from the Wikipedia API.
+An interactive map of waterfalls in the Hamilton, Ontario region. A Javascript application built for the Udacity Neighborhood Map Project.
+All waterfall data including lat/long was scraped from the Wikipedia API.
 
 ## Libraries I used:
 * [Knockout 3.4.2](http://knockoutjs.com/)
