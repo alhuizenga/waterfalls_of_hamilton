@@ -12,12 +12,11 @@ An interactive map of waterfalls in the Hamilton, Ontario region. A Javascript a
 1. Copy the index.html file into the root directory of your web server.
 1. Copy the style.css file into the root/css folder.
 1. Copy the app.js and waterfalls.js files into the root/js folder
-1. Copy the required library js files into the root/js/libs folder. These include:
-  * knockout-3.4.2.js
-  * jquery-3.2.0.min.js
-  * bootstrap.min.js
-  * drawer.min.js
-1. (Or, edit .the script tags at the bottom of index.html to point to online locations of the libraries)
+1. Copy the required library js files into the root/js/libs folder (Or, edit the script tags at the bottom of index.html to point to online locations of the libraries). These include:
+    * knockout-3.4.2.js
+    * jquery-3.2.0.min.js
+    * bootstrap.min.js
+    * drawer.min.js
 
 ## Libraries I used:
 * [Knockout 3.4.2](http://knockoutjs.com/)
