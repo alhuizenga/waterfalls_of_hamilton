@@ -5,15 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Hamilton Waterfalls</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-drawer.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
+        <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
     <body class="has-drawer">
 
         <!-- Drawer containing list of waterfalls -->
-        <div id="list-drawer" class="drawer dw-xs-5 dw-sm-6 dw-md-4 fold" 
+        <nav id="list-drawer" class="drawer dw-xs-5 dw-sm-6 dw-md-4 fold" 
         aria-labelledby="list-drawer">
             <div class="drawer-contents has-inner-drawer">
                 <div class="drawer-body">
@@ -31,10 +31,10 @@
                     </ul>
                 </div>
             </div>    
-        </div>
+        </nav>
 
         <!-- Drawer containing waterfall details -->
-        <div id="waterfall-drawer" class="drawer drawer-inside dw-xs-5 dw-sm-6 dw-md-4 fold"
+        <section id="waterfall-drawer" class="drawer drawer-inside dw-xs-5 dw-sm-6 dw-md-4 fold"
         aria-labelledby="waterfall-drawer">
             <div class="drawer-contents">
                 <div class="drawer-body" data-bind="with: currentWaterfall">
@@ -57,12 +57,12 @@
 
                 </div>
             </div>
-        </div>
+        </section>
 
         <div class="container-fluid">
 
             <!-- Header bar -->
-            <div class="header row">
+            <header class="row">
                 <div class="col-xs-1">
                     <button class="btn btn-info glyphicon glyphicon-menu-hamburger" type="button" data-toggle="drawer" data-target="#list-drawer" aria-expanded="false" aria-controls="list-drawer" aria-hidden="true">
                     </button>
@@ -70,12 +70,17 @@
                 <div class="col-xs-11 title">
                     <p>Hamilton Waterfalls</p>
                 </div>
-            </div>
+            </header>
 
             <!-- Google map -->
-            <div class="content row">
+            <section class="row">
                 <div id="map" class="col-xs-12 embed-responsive embed-responsive-16by9">
                 </div>
+            </section>
+
+            <!-- Google map connection error, initially hidden -->
+            <div class="mapError bg-danger" data-bind="visible: showMapError">
+                <span>Uh oh, can't connect to Google Maps!</span>
             </div>
 
         </div>
@@ -85,5 +90,8 @@
         <script src="js/libs/drawer.min.js"></script>
         <script src="js/waterfalls.js"></script>
         <script src="js/app.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADOgxff4kL41ShMt3w5oxgJ5YarPM6xTM&v=3&callback=initMap"
+        async defer onerror="mapError()"></script>
+
     </body>
 </html>
