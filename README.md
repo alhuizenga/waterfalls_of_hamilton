@@ -1,5 +1,6 @@
 # waterfalls_of_hamilton
 An interactive map of waterfalls in the Hamilton, Ontario region. A Javascript application built for the Udacity Neighborhood Map Project. Uses Knockout for UI interactivity, and Bootstrap Drawer by [Caroline Amaba](https://github.com/clineamb) for off-canvas styled navigation. Responsive and designed for mobile. All waterfall data including lat/long was scraped from the Wikipedia API.
+View the application at [https://alhuizenga.github.io/waterfalls_of_hamilton](https://alhuizenga.github.io/waterfalls_of_hamilton/)
 
 ## Files
 * index.html
