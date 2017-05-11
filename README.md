@@ -7,6 +7,18 @@ An interactive map of waterfalls in the Hamilton, Ontario region. A Javascript a
 * waterfalls.js (An array of waterfall objects scraped from Wikipedia)
 * style.css (App-specific styles)
 
+## Running the app
+
+1. Copy the index.html file into the root directory of your web server.
+1. Copy the style.css file into the root/css folder.
+1. Copy the app.js and waterfalls.js files into the root/js folder
+1. Copy the required library js files into the root/js/libs folder. These include:
+  * knockout-3.4.2.js
+  * jquery-3.2.0.min.js
+  * bootstrap.min.js
+  * drawer.min.js
+  (Or, edit .the script tags at the bottom of index.html to point to online locations of the libraries)
+
 ## Libraries I used:
 * [Knockout 3.4.2](http://knockoutjs.com/)
 * [jQuery 3.2.0](https://jquery.org/)
