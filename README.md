@@ -17,7 +17,7 @@ An interactive map of waterfalls in the Hamilton, Ontario region. A Javascript a
   * jquery-3.2.0.min.js
   * bootstrap.min.js
   * drawer.min.js
-  (Or, edit .the script tags at the bottom of index.html to point to online locations of the libraries)
+1. (Or, edit .the script tags at the bottom of index.html to point to online locations of the libraries)
 
 ## Libraries I used:
 * [Knockout 3.4.2](http://knockoutjs.com/)
